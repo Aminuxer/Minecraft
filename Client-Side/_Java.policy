@@ -1,0 +1,35 @@
+// MineCraft 1.5.1 Security Policy for Java VM
+
+grant {
+  // home permissions
+  permission java.io.FilePermission "${user.home}${/}", "read, write";
+  permission java.io.FilePermission "${user.home}${/}-", "read,write,delete";
+
+  // network
+  permission java.net.SocketPermission "*:25000-26000", "resolve,connect";
+  permission java.net.SocketPermission "224.0.2.60", "connect,accept,resolve";
+  permission java.net.SocketPermission "skins.minecraft.net:80", "connect,resolve";
+  permission java.net.SocketPermission "mcupdate.tumblr.com:80", "connect,resolve";
+  permission java.net.SocketPermission "static.tumblr.com:80", "connect,resolve";
+  permission java.net.SocketPermission "www.tumblr.com:80", "connect,resolve";
+  permission java.net.SocketPermission "pixel.quantserve.com:80", "connect,resolve";
+  permission java.net.SocketPermission "s3.amazonaws.com:80", "connect,resolve";
+  permission java.net.SocketPermission "s.optifine.net:80", "connect,resolve";
+
+  // MineCraft
+  permission java.lang.RuntimePermission "*", "read,write";
+  permission java.lang.reflect.ReflectPermission "suppressAccessChecks";
+  permission java.lang.management.ManagementPermission "monitor";
+  permission java.security.SecurityPermission "putProviderProperty.BC";
+  permission java.security.SecurityPermission "insertProvider.BC";
+  permission java.util.logging.LoggingPermission "control";
+  permission java.util.PropertyPermission "user.home", "read";
+  permission java.util.PropertyPermission "user.dir", "read";
+  permission java.util.PropertyPermission "LWJGL_DISABLE_XRANDR", "read,write";
+  permission java.util.PropertyPermission "java.vm.info", "read";
+  permission java.util.PropertyPermission "java.library.*", "read";
+  permission java.util.PropertyPermission "os_architecture", "read";
+  permission java.util.PropertyPermission "java_version", "read";
+  permission java.util.PropertyPermission "org.lwjgl.*", "read,write";
+  permission java.util.PropertyPermission "net.java.games.*", "read,write";
+};
