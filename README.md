@@ -1,4 +1,4 @@
 # Minecraft
 Configs, scripts, admin-tools
 
-Can br useful for admins of minecraft servers.
+Can be useful for admins of minecraft servers.
